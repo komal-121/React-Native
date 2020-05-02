@@ -2,8 +2,7 @@ import React from 'react'
 import{Text,
     StyleSheet,
     View,
-    FlatList,
-    TouchableOpacity
+    FlatList
  } from'react-native'
  import ImageDetail from '../components/ImageDetail'
 
@@ -19,26 +18,24 @@ const ListScreen=()=>{
        
        
     ];
-    const vansh=[1,1,1,1,1]
+    // const vansh=[1,1,1,1,1]
     return(
-        <View style={{flex:1}}>
+        <View style={{flex:1,backgroundColor:"crimson"}}>
              <FlatList 
                keyExtractor={(index,item)=>index+item}
         data={friends}
             renderItem={({ item}) =>{
             
             return(
-                // <Text>{item.name}</Text>
-                   <ImageDetail
-                title={item.name}
-                click={()=>alert(item.id)}
-               />
+             
+                <Text style={styles.textStyles}>{item.name}</Text>
+                //    <ImageDetail
+                // title={item.name}
+                // click={()=>alert(item.id)}
+            //    />
 
-            )
-           
-               
-            }
-            }
+            )           
+         }}
             >
         </FlatList>
 
@@ -51,7 +48,9 @@ const styles=StyleSheet.create({
     textStyles:{
         fontSize:30,
         marginVertical:50,
-        color:"red"
+        color:"black",
+        backgroundColor:"cornsilk"
+       
     }
 })
 

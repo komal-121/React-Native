@@ -1,17 +1,37 @@
 import React from'react'
-import {View,StyleSheet,Text,Image}from 'react-native'
+import {View,
+    StyleSheet,
+    ScrollView,
+    Text,
+    Image}from 'react-native'
 import ImageDetail from '../components/ImageDetail'
 
 const ImageScreen=()=>{
     return(
         <View>
-            <ImageDetail title="Cat"/>            
-            <ImageDetail title="Dog"/>
-            <ImageDetail title="Rabbit"/>
-            <ImageDetail title="Panda"/>
+        <ScrollView>
+            <ImageDetail title="Cat"
+             imageSource={require('../../assets/cat.jpg')}
+             score={9}
+             />            
+            
+            <ImageDetail title="Dog" 
+            imageSource={require('../../assets/dog.jpg')}
+            score={10}
+            />
 
+            <ImageDetail title="Rabbit"
+             imageSource={require('../../assets/rabbit.jpg')}
+             score={8}
+             />
+
+            <ImageDetail title="Panda" 
+            imageSource={require('../../assets/panda.jpg')}
+            score={9}
+            />
+
+        </ScrollView>
         </View>
-
         )
 }
 

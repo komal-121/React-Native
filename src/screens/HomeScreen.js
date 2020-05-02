@@ -1,16 +1,17 @@
 import React from 'react'
-import{Text,StyleSheet,View,Button,TouchableOpacity} from'react-native'
+import{Text,StyleSheet,View,Button,TouchableOpacity,ScrollView} from'react-native'
 
 const HomeScreen=(props)=>{
     return (
-    <View>
-    <Text style={styles.text}>HomeScreen</Text>
-    <Button 
+    <View style={{flex:1,backgroundColor:"midnightblue"}}>
+        <ScrollView>
+    {/* <Text style={styles.text}>HomeScreen</Text> */}
+    {/* <Button 
         //  onPress={navigation.navigate('compo', {name: 'pallu'})}
         onPress={()=>{
             props.navigation.navigate("compo")}}
-         title="Go to ComponentScreen"
-    />
+         title="Go to Component Screen"
+    /> */}
     <TouchableOpacity 
         style={styles.button}
         onPress={()=>props.navigation.navigate("list")}>
@@ -18,22 +19,31 @@ const HomeScreen=(props)=>{
     </TouchableOpacity>
     <Button 
         onPress={()=>props.navigation.navigate("image")}
-         title="Go to ImageScreen"
+         title="Go to Image Screen"
     />
-    
-    
+    <TouchableOpacity 
+        style={styles.button}
+        onPress={()=>props.navigation.navigate("count")}>
+        <Text>Go to Counter screen</Text>
+    </TouchableOpacity>
+    <Button 
+        onPress={()=>props.navigation.navigate("color")}
+         title="Go to Color Screen"
+    />
+   <TouchableOpacity
+        style={styles.button}
+        onPress={()=>props.navigation.navigate("square")}>
+        <Text>Go to Square Screen</Text>
+    </TouchableOpacity>
+    </ScrollView>
     </View>
     )
 }
 
 const styles=StyleSheet.create({
 
-    text:{
-        fontSize:30,
-        flex:1
-    },
-    button:{
-        backgroundColor:'lightgrey',
+       button:{
+        backgroundColor:'lightsteelblue',
         height:50,
         width:200,
         alignSelf:'center',
