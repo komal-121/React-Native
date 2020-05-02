@@ -12,7 +12,7 @@ const ColorScreen=()=>{
     const vansh =['black','green','gray',"blue"]
     console.log(colors)
     return(
-        <View style={{flex:1}}>
+        <View style={{flex:1,backgroundColor:'#BDE87D'}}>
             <TouchableOpacity
                style={styles.button}
                onPress={()=>{
@@ -21,7 +21,7 @@ const ColorScreen=()=>{
                 // setColor([randomRgb()])
                   }}
             >
-                 <Text style={{fontSize:30,fontStyle:"italic",fontWeight:"bold"}}> Add color </Text>
+                 <Text style={{fontSize:30,fontStyle:"italic",fontWeight:"bold",color:'#98DB34'}}> Add color </Text>
             </TouchableOpacity>
             
 
@@ -31,7 +31,7 @@ const ColorScreen=()=>{
             renderItem={({ item}) =>{
             
             return(
-                <View style={{backgroundColor:item,height:180,width:200}}></View>
+                <View style={{backgroundColor:item,height:100,width:100}}></View>
                 )
             }}
             >
@@ -54,7 +54,7 @@ const randomRgb=()=>{
 
 const styles=StyleSheet.create({
 button:{
-    backgroundColor:'steelblue',
+    backgroundColor:'white',
     height:50,
     width:200,
     alignSelf:'center',

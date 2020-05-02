@@ -3,7 +3,7 @@ import{Text,StyleSheet,View,Button,TouchableOpacity,ScrollView} from'react-nativ
 
 const HomeScreen=(props)=>{
     return (
-    <View style={{flex:1,backgroundColor:"midnightblue"}}>
+    <View style={{flex:1,backgroundColor:"#98DB34"}}>
         <ScrollView>
     {/* <Text style={styles.text}>HomeScreen</Text> */}
     {/* <Button 
@@ -14,27 +14,35 @@ const HomeScreen=(props)=>{
     /> */}
     <TouchableOpacity 
         style={styles.button}
-        onPress={()=>props.navigation.navigate("list")}>
-        <Text>Go to List screen</Text>
+        onPress={()=>props.navigation.navigate("List")}>
+        <Text style={styles.btext}>Go to List screen</Text>
     </TouchableOpacity>
     <Button 
-        onPress={()=>props.navigation.navigate("image")}
+        color="#DB3477"
+        onPress={()=>props.navigation.navigate("Image")}
          title="Go to Image Screen"
     />
     <TouchableOpacity 
         style={styles.button}
-        onPress={()=>props.navigation.navigate("count")}>
-        <Text>Go to Counter screen</Text>
+        onPress={()=>props.navigation.navigate("Count")}>
+        <Text style={styles.btext}>Go to Counter screen</Text>
     </TouchableOpacity>
     <Button 
-        onPress={()=>props.navigation.navigate("color")}
+        color="#DB3477"
+        onPress={()=>props.navigation.navigate("Color")}
          title="Go to Color Screen"
     />
    <TouchableOpacity
         style={styles.button}
-        onPress={()=>props.navigation.navigate("square")}>
-        <Text>Go to Square Screen</Text>
+        onPress={()=>props.navigation.navigate("Square")}>
+        <Text style={styles.btext}>Go to Square Screen</Text>
     </TouchableOpacity>
+    <Button
+        color="#DB3477"
+        // tainerStyle={{padding:10, height:45}}
+        onPress={()=>props.navigation.navigate("Text")}
+         title="Go to Text Screen"
+    />
     </ScrollView>
     </View>
     )
@@ -43,7 +51,7 @@ const HomeScreen=(props)=>{
 const styles=StyleSheet.create({
 
        button:{
-        backgroundColor:'lightsteelblue',
+        backgroundColor:'snow',
         height:50,
         width:200,
         alignSelf:'center',
@@ -55,6 +63,11 @@ const styles=StyleSheet.create({
         borderBottomRightRadius:10,
         borderTopLeftRadius:10,
         borderTopRightRadius:10,
+    },
+    btext:{
+        color:"#DB3477",
+        fontWeight:'bold',
+        fontSize:18
     }
 })
 

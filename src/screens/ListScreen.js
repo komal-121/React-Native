@@ -20,7 +20,7 @@ const ListScreen=()=>{
     ];
     // const vansh=[1,1,1,1,1]
     return(
-        <View style={{flex:1,backgroundColor:"crimson"}}>
+        <View style={{flex:1,backgroundColor:"#98DB34"}}>
              <FlatList 
                keyExtractor={(index,item)=>index+item}
         data={friends}

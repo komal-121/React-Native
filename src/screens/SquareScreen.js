@@ -42,7 +42,7 @@ const SquareScreen=()=>{
 
     const {red,green,blue}=state;
     return(
-        <View style={{flex:1}}>
+        <View style={{flex:1,backgroundColor:'#ADE25D'}}>
             <ScrollView>
                 <ColorCounter
                    onIncrease={()=>runReducer({colorToChange:'red',amount:COLOR_INCREMENT})} 
@@ -65,6 +65,7 @@ const SquareScreen=()=>{
                  fontStyle:"italic",
                  textAlign:"center",
                  marginTop:20,
+                 color:'#DB3477',
                 fontFamily:"times new roman"
                 }}>
                 Square of Color Is Here

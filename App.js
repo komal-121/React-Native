@@ -6,6 +6,7 @@ import ImageScreen from './src/screens/ImageScreen';
 import CounterScreen from './src/screens/CounterScreen';
 import ColorScreen from './src/screens/ColorScreen';
 import SquareScreen from './src/screens/SquareScreen';
+import TextScreen from './src/screens/TextScreen';
 import * as React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
@@ -37,14 +38,15 @@ const Stack = createStackNavigator();
          <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{title: 'Welcome'}}
+          options={{title: 'Welcome To Home Screen'}}
         />
-        <Stack.Screen name="compo" component={ComponentScreen} />
-         <Stack.Screen name="list" component={ListScreen} />
-         <Stack.Screen name="image"component={ImageScreen}/>
-         <Stack.Screen name="count"component={CounterScreen}/>
-         <Stack.Screen name="color"component={ColorScreen}/>
-         <Stack.Screen name="square"component={SquareScreen}/>
+        <Stack.Screen name="Compo" component={ComponentScreen} />
+         <Stack.Screen name="List" component={ListScreen} />
+         <Stack.Screen name="Image"component={ImageScreen}/>
+         <Stack.Screen name="Count"component={CounterScreen}/>
+         <Stack.Screen name="Color"component={ColorScreen}/>
+         <Stack.Screen name="Square"component={SquareScreen}/>
+         <Stack.Screen name="Text"component={TextScreen}/>
       </Stack.Navigator>
       </NavigationContainer>
     )

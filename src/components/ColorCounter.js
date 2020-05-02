@@ -8,7 +8,7 @@ import {
  
 const ColorCounter=({color,onIncrease,onDecrease})=>{
     return(
-        <View>
+        <View style={{flex:1,backgroundColor:'#ADE25D'}}>
          
             <Text style={styles.text}>{color}</Text>
 
@@ -34,7 +34,7 @@ const ColorCounter=({color,onIncrease,onDecrease})=>{
 
 const styles=StyleSheet.create({
     button:{
-        backgroundColor:'steelblue',
+        backgroundColor:'white',
         height:50,
         width:200,
         alignSelf:'center',
@@ -48,7 +48,7 @@ const styles=StyleSheet.create({
         borderTopRightRadius:5,
     },
     buttons:{
-        backgroundColor:'steelblue',
+        backgroundColor:'white',
         height:50,
         width:200,
         alignSelf:'center',
@@ -64,12 +64,14 @@ const styles=StyleSheet.create({
         fontSize:20,
         fontWeight:"bold",
         fontStyle:"italic",
-        fontFamily:"times new roman"
+        fontFamily:"times new roman",
+        color:'#DB3477'
         
     },
     btext:{
         fontSize:18,
-        fontWeight:"bold"
+        fontWeight:"bold",
+        color:'#DB3477'
         
     }
     
